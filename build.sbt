@@ -19,7 +19,7 @@ libraryDependencies ++= Seq("storm" % "storm" % "0.6.0"
 
 publishMavenStyle := true
 
-publishTo := Some("Qf Ext Snapshots" at "http://repo.quantifind.com/content/repositories/ext-snapshots/")
+publishTo := Some("Qf Ext Snapshots" at "http://repo.quantifind.com/content/repositories/ext-releases/")
 
 publishArtifact in packageDoc := false
 
