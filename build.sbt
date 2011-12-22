@@ -1,6 +1,6 @@
 name := "scala-storm"
 
-version := "0.2"
+version := "0.2.1"
 
 // If you comment this out, SBT 0.10 will default to Scala 2.8.1
 scalaVersion := "2.9.1"
