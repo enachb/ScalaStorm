@@ -12,7 +12,16 @@ unmanagedSourceDirectories in Compile <<= Seq( baseDirectory( _ / "examples" ),
 resolvers ++= Seq("clojars" at "http://clojars.org/repo/",
                   "clojure-releases" at "http://build.clojure.org/releases")
 
-libraryDependencies += "storm" % "storm" % "0.6.0"
+libraryDependencies ++= Seq("storm" % "storm" % "0.6.0"
+)
+
+publishMavenStyle := true
+
+publishTo := Some("Qf Ext Snapshots" at "http://repo.quantifind.com/content/repositories/ext-snapshots/")
+
+publishArtifact in packageDoc := false
+
+//defaultMavenRepository := "http://repo.quantifind.com/content/repositories/ext-snapshots/"
 
 // This is to prevent error [java.lang.OutOfMemoryError: PermGen space]
 javaOptions += "-XX:MaxPermSize=1024m"
@@ -27,3 +36,4 @@ ivyLoggingLevel := UpdateLogging.Full
 
 // Aagin this may be useful for debugging
 logLevel := Level.Info
+
